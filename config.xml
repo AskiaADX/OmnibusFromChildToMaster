@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control  xmlns="http://www.askia.com/2.2.0/ADCSchema"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.askia.com/2.2.0/ADCSchema https://raw.githubusercontent.com/AskiaADX/ADXSchema/2.2.0/ADCSchema.xsd"
+          version="2.2.0"
+          askiaCompat="5.5.2">
+  <info>
+    <name>OmnibusFromChildToMaster</name>
+    <guid>41b31675-09d9-47a1-8548-873c932b0cfa</guid>
+    <version>1.0.0</version>
+    <date>2020-04-01</date>
+    <description><![CDATA[Manage the redirection from the child surveys to the master survey for omnibus projects]]></description>
+    <company>Askia SAS</company>
+    <author><![CDATA[Askia SAS]]></author>
+    <site>https://www.askia.com</site>
+    <helpURL></helpURL>
+    <categories>
+      <category>General</category>
+    </categories>
+    <constraints>
+      <constraint on="questions" single="true" multiple="false" numeric="false" date="false" open="false" requireParentLoop="false" requireLoopDepth="0" chapter="false" />
+      <constraint on="controls" responseblock="true" checkbox="false" label="false" listbox="false" radiobutton="true" textbox="false" />
+      <constraint on="responses" max="*" min="*" />
+    </constraints>
+  </info>
+  <outputs defaultOutput="default">
+    <output id="default" manageLoopDepth="0">
+      <description><![CDATA[Default output]]></description>
+      <content fileName="styles.css" type="css" mode="static" position="head" />
+      <content fileName="default.html" type="html" mode="dynamic" position="placeholder" />
+      <content fileName="script.js" type="javascript" mode="dynamic" position="foot" />
+    </output>
+  </outputs>
+  <properties>
+    <category id="general" name="General">
+      <property xsi:type="standardProperty" id="masterUrl" name="URL to master survey" type="string">
+        <description><![CDATA[ 
+			URL to the master survey.
+        ]]></description>
+        <value></value>
+      </property>
+    </category>
+  </properties>
+</control>
