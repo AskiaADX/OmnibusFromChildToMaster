@@ -39,6 +39,12 @@
         ]]></description>
         <value></value>
       </property>
+      <property xsi:type="standardProperty" id="surveySuffix" name="Current survey suffix" type="string">
+        <description><![CDATA[ 
+			Suffix of the current survey used for the importation in the master survey.
+        ]]></description>
+        <value></value>
+      </property>
     </category>
   </properties>
 </control>
